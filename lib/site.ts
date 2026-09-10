@@ -1,10 +1,33 @@
+/**
+ * Endereço público do site. Um valor vazio ou inválido não pode derrubar o build:
+ * cai para o domínio de produção informado pela Vercel e, por último, para o localhost.
+ */
+function resolverUrlDoSite() {
+  const candidatos = [
+    process.env.NEXT_PUBLIC_SITE_URL,
+    process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+  ];
+
+  for (const candidato of candidatos) {
+    const valor = candidato?.trim().replace(/^["']|["']$/g, "");
+    if (!valor) continue;
+    try {
+      return new URL(valor).origin;
+    } catch {
+      console.warn(`[site] URL inválida ignorada: "${valor}"`);
+    }
+  }
+
+  return "http://localhost:3000";
+}
+
 export const SITE = {
   nome: "Réplica",
   lema: "Informar. Questionar. Conversar.",
   descricao:
     "Nascida em Nova Serrana, a Réplica organiza informações relevantes e amplia o debate sobre a cidade.",
   cidade: "Nova Serrana, MG",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: resolverUrlDoSite(),
 };
 
 /**
