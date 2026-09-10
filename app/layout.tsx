@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans, Noto_Serif } from "next/font/google";
-import { SITE } from "@/lib/site";
+import { MODO_PREVIA, SITE } from "@/lib/site";
 import "./globals.css";
 
 // Tipografia do brandbook: Noto Sans (informação) e Noto Serif Bold (manchetes).
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   description: SITE.descricao,
   openGraph: { siteName: SITE.nome, locale: "pt_BR", type: "website" },
   alternates: { types: { "application/rss+xml": "/feed.xml" } },
+  robots: MODO_PREVIA ? { index: false, follow: false } : undefined,
 };
 
 export const viewport: Viewport = {
