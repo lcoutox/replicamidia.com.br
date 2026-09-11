@@ -27,14 +27,20 @@ export async function generateMetadata({ params }: PageProps<"/[secao]/[slug]">)
   if (!materia) return {};
 
   const url = hrefMateria(materia);
-  const descricao = materia.linhaFina ?? undefined;
+  // SEO da matéria: campos próprios têm prioridade; sem eles, título e linha fina.
+  const tituloSeo = materia.seo?.metaTitulo?.trim() || materia.titulo;
+  const descricao = materia.seo?.metaDescricao?.trim() || materia.linhaFina || undefined;
+  const palavras = ["Nova Serrana", FORMATO_ROTULO[materia.formato]];
+  if (materia.editoria?.titulo) palavras.push(materia.editoria.titulo);
+
   return {
-    title: materia.titulo,
+    title: tituloSeo,
     description: descricao,
+    keywords: palavras,
     alternates: { canonical: url },
     openGraph: {
       type: "article",
-      title: materia.titulo,
+      title: tituloSeo,
       description: descricao,
       url,
       publishedTime: materia.publicadoEm,

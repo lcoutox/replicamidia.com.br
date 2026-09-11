@@ -41,6 +41,7 @@ export const MATERIA_QUERY = defineQuery(`*[${PUBLICADA} && slug.current == $slu
   perguntasEmAberto,
   fontes,
   correcoes,
+  seo,
   corpo[]{
     ...,
     _type == "imagem" => {

@@ -69,6 +69,8 @@ export type Fonte = { _key?: string; nome: string; url?: string | null };
 
 export type Correcao = { _key?: string; data: string; texto: string };
 
+export type Seo = { metaTitulo?: string | null; metaDescricao?: string | null };
+
 export type Materia = MateriaResumo & {
   atualizadoEm?: string | null;
   resumo?: string[] | null;
@@ -76,6 +78,7 @@ export type Materia = MateriaResumo & {
   fontes?: Fonte[] | null;
   perguntasEmAberto?: string[] | null;
   correcoes?: Correcao[] | null;
+  seo?: Seo | null;
 };
 
 export type Home = {
