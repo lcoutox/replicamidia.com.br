@@ -135,7 +135,7 @@ export default async function PaginaInicial() {
                 A cidade em debate.
               </h2>
               <p className="mt-4 max-w-sm text-base leading-[1.5] text-grafite">
-                Textos que assumem a interpretação da Réplica, explicam o argumento e apontam os fatos que o sustentam.
+                A Réplica toma posição, explica o argumento e sustenta com dado.
               </p>
               <LinkSeta href="/opiniao" className="mt-6">
                 Todas as opiniões

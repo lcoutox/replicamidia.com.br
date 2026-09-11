@@ -15,7 +15,7 @@ export default function NaoEncontrado() {
             Esta página não existe ou mudou de endereço.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-[1.5] text-grafite">
-            Se você chegou aqui por um link da Réplica, avise para corrigirmos.
+            Se você chegou aqui por um link nosso, avise a gente.
           </p>
           <Link
             href="/"

@@ -23,9 +23,9 @@ function resolverUrlDoSite() {
 
 export const SITE = {
   nome: "Réplica",
-  lema: "Informar. Questionar. Conversar.",
+  lema: "Informação e opinião sobre Nova Serrana.",
   descricao:
-    "Nascida em Nova Serrana, a Réplica organiza informações relevantes e amplia o debate sobre a cidade.",
+    "A Réplica cobre o que acontece em Nova Serrana: política, cultura, cotidiano e o que importa de fora.",
   cidade: "Nova Serrana, MG",
   url: resolverUrlDoSite(),
 };

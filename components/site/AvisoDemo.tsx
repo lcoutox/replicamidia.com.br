@@ -3,9 +3,9 @@ import { isSanityConfigured } from "@/sanity/env";
 
 export function AvisoDemo() {
   const mensagem = !isSanityConfigured
-    ? "Modo demonstração: textos, pessoas e imagens são ilustrativos. Configure o Sanity para publicar conteúdo real."
+    ? "Modo demonstração — o conteúdo é ilustrativo. Configure o Sanity para publicar de verdade."
     : MODO_PREVIA
-      ? "Site em prévia: textos, pessoas e imagens são ilustrativos e ainda não representam publicações da Réplica."
+      ? "Prévia — conteúdo não publicado. Isso ainda não representa publicações da Réplica."
       : null;
 
   if (!mensagem) return null;

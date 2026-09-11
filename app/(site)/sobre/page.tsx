@@ -17,30 +17,30 @@ export const metadata: Metadata = {
 const PILARES = [
   {
     titulo: "Direito de resposta",
-    texto: "As aspas representam a fala que pode ser examinada, confrontada e respondida.",
+    texto: "Quem é citado tem o direito de responder. A fala publicada pode ser examinada e contestada.",
   },
   {
     titulo: "Consequência",
-    texto: "O debate continua depois do fato. O que mudou? Quem responde? O que falta saber?",
+    texto: "O que mudou. O que vem a seguir.",
   },
   {
     titulo: "Presença pública",
-    texto: "Uma voz reconhecível para informação, opinião e, progressivamente, entrevistas.",
+    texto: "Uma voz reconhecível na cidade — presente em informação, opinião e entrevista.",
   },
 ];
 
 const VOZ = [
   {
     rotulo: "Informação",
-    texto: "O que aconteceu, quando, onde e de acordo com qual fonte. Separamos confirmação de hipótese.",
+    texto: "O que aconteceu, quando, onde e com base em qual fonte. Confirmação separada de hipótese.",
   },
   {
     rotulo: "Opinião",
-    texto: "Assumimos a interpretação da Réplica, explicamos o argumento e apontamos os fatos que o sustentam.",
+    texto: "A Réplica toma posição, explica o argumento e aponta os fatos que o sustentam.",
   },
   {
     rotulo: "Conversa",
-    texto: "Identificamos quem fala e preservamos contexto e sentido. Aspas apenas em citações verificadas.",
+    texto: "Identificamos quem fala e preservamos o contexto. Aspas apenas em falas verificadas.",
   },
 ];
 
@@ -59,10 +59,10 @@ export default async function PaginaSobre() {
       <header className="bg-preto text-branco">
         <div className="container-site py-16 md:py-24">
           <Logo versao="negativo" className="h-auto w-full max-w-[36rem]" />
-          <h1 className="mt-12 font-serif text-[2.5rem] font-bold leading-[1.1] md:text-5xl">Uma marca que responde.</h1>
+          <h1 className="mt-12 font-serif text-[2.5rem] font-bold leading-[1.1] md:text-5xl">Nova Serrana, informada.</h1>
           <p className="mt-5 max-w-2xl text-xl leading-[1.5] text-nevoa">
             Nascida em Nova Serrana, a Réplica organiza informações relevantes e amplia o debate sobre a cidade. Falamos
-            com independência, clareza e disposição para cobrar respostas.
+            com independência, clareza e voz editorial própria.
           </p>
         </div>
       </header>
@@ -85,7 +85,7 @@ export default async function PaginaSobre() {
 
       <section id="principios" aria-labelledby="titulo-principios" className="scroll-mt-24 border-t border-linha">
         <div className="container-site py-14 md:py-20">
-          <CabecalhoSecao id="titulo-principios" rotulo="Voz editorial" titulo="Crítica com fundamento" />
+          <CabecalhoSecao id="titulo-principios" rotulo="Voz editorial" titulo="A Réplica tem voz própria" />
           <div className="mt-10 grid gap-10 md:grid-cols-3">
             {VOZ.map((item) => (
               <div key={item.rotulo}>

@@ -12,31 +12,31 @@ export const SECOES: readonly Secao[] = [
   {
     slug: "em-pauta",
     titulo: "Em pauta",
-    descricao: "O que aconteceu, quando, onde e de acordo com qual fonte. Notas curtas e reportagens.",
+    descricao: "O que aconteceu, quando, onde e com base em qual fonte. Notas e reportagens.",
     formatos: ["nota", "reportagem"],
   },
   {
     slug: "analise",
     titulo: "Análise",
-    descricao: "O debate continua depois do fato. O que mudou? Quem responde? O que falta saber?",
+    descricao: "O que mudou. O que vem a seguir.",
     formatos: ["analise"],
   },
   {
     slug: "opiniao",
     titulo: "Opinião",
-    descricao: "A interpretação da Réplica, com o argumento explicado e os fatos que o sustentam.",
+    descricao: "A posição da Réplica, sustentada por argumento e dado.",
     formatos: ["opiniao"],
   },
   {
     slug: "conversa",
     titulo: "Conversa",
-    descricao: "Entrevistas que identificam quem fala e preservam contexto e sentido.",
+    descricao: "Entrevistas com contexto. Aspas de quem realmente falou.",
     formatos: ["entrevista"],
   },
   {
     slug: "videos",
     titulo: "Vídeos",
-    descricao: "A cidade explicada em poucos minutos, na mesma linguagem do nosso Instagram.",
+    descricao: "A cidade explicada em vídeo, curto e direto.",
     formatos: ["video"],
   },
 ];
