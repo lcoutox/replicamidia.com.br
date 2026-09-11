@@ -182,7 +182,7 @@ export const materia = defineType({
       title: "Fontes",
       type: "array",
       group: "apuracao",
-      description: "De acordo com qual fonte? Toda informação precisa de origem identificada.",
+      description: "Identifique a origem quando houver. Nem toda matéria exige fonte formal.",
       of: [
         defineArrayMember({
           type: "object",
