@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Aspa, Logo } from "@/components/brand/Logo";
+import { Logo } from "@/components/brand/Logo";
 import { CabecalhoSecao } from "@/components/ui/CabecalhoSecao";
 import { Rotulo } from "@/components/ui/Rotulo";
 import { getConfiguracoes } from "@/lib/content";
@@ -61,8 +61,7 @@ export default async function PaginaSobre() {
           <Logo versao="negativo" className="h-auto w-full max-w-[36rem]" />
           <h1 className="mt-12 font-serif text-[2.5rem] font-bold leading-[1.1] md:text-5xl">Nova Serrana, informada.</h1>
           <p className="mt-5 max-w-2xl text-xl leading-[1.5] text-nevoa">
-            Nascida em Nova Serrana, a Réplica organiza informações relevantes e amplia o debate sobre a cidade. Falamos
-            com independência, clareza e voz editorial própria.
+            {SITE.descricao}
           </p>
         </div>
       </header>
@@ -94,16 +93,6 @@ export default async function PaginaSobre() {
               </div>
             ))}
           </div>
-
-          <figure className="mt-14 grid gap-8 bg-preto p-8 text-branco md:grid-cols-12 md:p-12">
-            <div className="md:col-span-9">
-              <Rotulo tom="escuro">Exemplo de tom</Rotulo>
-              <blockquote className="mt-6 font-serif text-[1.75rem] font-bold leading-[1.2] md:text-[2.5rem]">
-                <p>“O prazo informado terminou. Qual é a nova previsão de entrega?”</p>
-              </blockquote>
-            </div>
-            <Aspa className="hidden h-32 w-auto justify-self-end text-azul md:col-span-3 md:block" />
-          </figure>
 
           <ul className="mt-12 grid gap-4 sm:grid-cols-2">
             {COMPROMISSOS.map((compromisso) => (
